@@ -10,14 +10,14 @@ body {
   background-color: white;
 }
 .nav-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 160px;
-  padding: 20px 0;
-  width: 1000px;
-  margin: 0 auto;
-  border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 160px;
+    padding: 20px 0;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    border-bottom: 1px solid #ddd;
 }
 .nav-top a {
   text-decoration: none;
@@ -35,15 +35,16 @@ body {
   backdrop-filter: saturate(150%) blur(30px);
 }
 .bottom-bar-inside {
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 60px;
-  margin: 0 auto;
-  width: 1000px;
-  z-index: 1000;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 60px;
+    margin: 0 auto;
+    width: calc(100% - 120px);
+    z-index: 1000;
 }
+
 .bottom-bar .left {
   display: flex;
   align-items: center;
@@ -125,6 +126,29 @@ h1{
   color: white;
   background-color: #e9335f;
 }
+@media (max-width: 768px) {
+  .nav-top{
+    
+  }
+  .nav-top a{
+    font-size: 0.rem;
+  }
+  .first-section h1{
+    min-width: 25%;
+    font-size: 3rem;
+  }
+  .top-bar .nav-top{
+    display: flex;
+    gap:1px
+  }
+  .bottom-bar .bottom-bar-inside{
+    display: flex;
+    flex-direction: column;
+    
+  }
+}
+
+
 
 
 .background-dark-section{
@@ -171,7 +195,7 @@ h1{
   display: flex;
   flex-direction: column;
   text-align: left;
-  padding: 20px;
+  padding: 10px;
   border-radius: 30px;
   max-width: 400px;
   flex: 1 1 400px;
@@ -181,12 +205,14 @@ h1{
   margin: 30px;
   margin-bottom: -20px;
 }
+
 .descripcion2 {
   font-size: 17px;
   color: rgb(189, 189, 189);
   margin: 30px;
   line-height: 1.5;
 }
+
 .img2{
   width: 80%;
   max-width: 400px;
@@ -194,6 +220,40 @@ h1{
   align-self: center;
   margin-top: 30px;
 }
+
+@media (max-width: 768px) {
+  .boxes{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    gap:30px;
+    margin-top: 20px;
+    max-width: 100%;
+    min-width: 25%;
+    
+    
+  }
+  .box {  
+    margin-top: 20px;
+    flex: 1 1;
+    
+  }
+  .box h2{
+    font-size: 1.9rem;
+    font-weight: bold;
+  }
+  .descripcion2{
+    font-size: 0.55 rem; 
+
+  }
+
+  .img2 {
+    
+  }
+ 
+  
+}
+
 .box1 {
   background-color: rgb(35, 34, 34);
   display: flex;
@@ -250,20 +310,25 @@ h1{
   height: auto;
 }
 .boxes1 {
-  width: 80%;
+  min-width: 25%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
   gap: 40px;             
-  max-width: 1200px;
   margin: 0 auto; 
+  margin-left: -25px;
+  justify-content: center;
+
 }
 .card {
   border-radius: 30px;
-  width: 350px;
+  min-width: 25%;
+  width: 250px;
   text-align: left;
   margin-left: 80px;
+
 }
+
+
 .dark-section2 a{
   font-size: 18px;
   padding-top: 60px;
@@ -282,6 +347,61 @@ h1{
   max-width: 40px;
 }
 
+@media (max-width: 768px) {
+.dark-section2 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+   
+}
+.dark-section2 h2 {
+  font-size: 2.2rem;
+  max-width: 50%;
+}
+
+.dark-section2 p{
+  font-size: 1.1rem;
+  max-width: 55%;
+}
+
+.dark-section2 img.img4{
+  max-width: 55%;
+}
+
+
+
+.boxes1{
+  min-width: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 200px;
+  width: calc(100%-400px);
+  margin-top: -180px;
+  margin-left: 0px;
+  margin-right: 0px;
+  align-items: flex-start;
+  justify-content: space-between;
+  
+  
+}
+
+.card{
+  display: flex;
+  flex: 1 1 0px;
+  flex-direction: column;
+  font-size: 0.7rem;
+  margin-left: 0px;
+  min-width: 45%;
+  justify-content: flex-start;
+}
+
+.card p{
+  font-size: 0.8rem;
+  max-width: 80%;
+}
+
+}
+
 .white-section {
   display: flex;
   flex-direction: column;
@@ -294,9 +414,9 @@ h1{
   margin: 0 auto;
 }
 .img5{
-  max-width: 1100px;
-  border-radius: 30px;
-  padding: 40px;
+   max-width: calc(100% - 80px);
+    border-radius: 30px;
+    padding: 40px;
 }
 .white-section p{
   width: 80%;
@@ -346,4 +466,41 @@ p.grey-text{
   line-height: 1.5;
   padding: 20px;
   z-index: 1
+}
+
+@media (max-width: 768px) {
+  .box1.white{
+    margin-top: 10px;
+    
+  }
+  .box1-text{
+    margin-top: -20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    
+    
+    
+  }
+  .box1-text h2{
+    min-width: 25%;
+    justify-content: flex-start;
+    font-size: 0.9rem;
+    border-bottom: #2f434b;
+    
+  }
+  .box1-text p{
+    font-size: 0.9rem;
+    
+    
+    
+  }
+  .box1-text img{
+    
+    margin-top: -20px;
+    max-width: 50%;
+    
+
+  }
 }
